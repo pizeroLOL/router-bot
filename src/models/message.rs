@@ -103,10 +103,8 @@ pub struct PokeRecv {
     pub name: String,
 }
 
-// pub struct AnonymousReceive {}
-
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct AnonymousRecv {
+pub struct AnonymousSend {
     pub ignore: Option<OneBotBool>,
 }
 
@@ -220,7 +218,7 @@ pub enum Send {
     Dice(Dice),
     Shake(Shake),
     Poke(PokeRecv),
-    Anonymous(AnonymousRecv),
+    Anonymous(AnonymousSend),
     Share(ShareRecv),
     Contact(ContactType),
     Location(LocationSend),
@@ -245,7 +243,6 @@ pub enum Recv {
     Dice(Dice),
     Shake(Shake),
     Poke(PokeRecv),
-    Anonymous(AnonymousRecv),
     Share(ShareRecv),
     Contact(ContactType),
     Location(LocationRecv),
